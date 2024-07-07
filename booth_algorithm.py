@@ -1,8 +1,4 @@
-# Signed Multiplication (2's Complement Multiplication)
-# Booth Algorithm
-
 from binary_subtraction import binary_adder, twos_complement
-
 
 def booth(M, Q):
     count = max(len(M), len(Q))

@@ -36,14 +36,14 @@ def twos_complement(y):
         result = str(sum_bit) + result
     return result
 
-
-x = input("Enter first number X: ")
-y = input("Enter second number Y: ")
-x, y = make_same_len(x, y)
-choice = int(input("Enter 1 for Subtraction and 2 for Multiplication: "))
-if choice == 1:
-    sum = binary_adder(x, twos_complement(y))
-    print(f"Difference = {sum}")
-elif choice == 2:
-    product = binary_multiplication(x, y, len(y))
-    print(f"Product = {product}")
+if __name__ == "__main__":
+    x = input("Enter first number X: ")
+    y = input("Enter second number Y: ")
+    x, y = make_same_len(x, y)
+    choice = int(input("Enter 1 for Subtraction and 2 for Multiplication: "))
+    if choice == 1:
+        sum = binary_adder(x, twos_complement(y))
+        print(f"Difference = {sum}")
+    elif choice == 2:
+        product = binary_multiplication(x, y, len(y))
+        print(f"Product = {product}")

@@ -9,20 +9,20 @@ def adjust_number(x, y):
     return (x, y)
 
 
-def binary_multiplication(x, y, count):
-    sum = "0" * len(x)
-    for i in range(count):
-        if y[-1] == "1":
-            sum = binary_adder(sum, x)
-        x = x[1:] + "0"
-        y = "0" + y[:-1]
+def binary_multiplication(x, y, count): # 1011, 0001, 2
+    sum = "0" * len(x)                  # 0000
+    for i in range(count):              # 2
+        if y[-1] == "1":                
+            sum = binary_adder(sum, x)  # 0000 + 1011 # 1011 + 1011
+        x = x[1:] + "0"                 # 0110 
+        y = "0" + y[:-1]                # 01
     return sum
 
 
 if __name__ == "__main__":
-    x = input("Enter multiplicand: ")
-    y = input("Enter multiplier: ")
-    count = len(y)  # no of bits in y
-    x, y = adjust_number(x, y)
-    product = binary_multiplication(x, y, count)
+    x = input("Enter multiplicand: ") # 1011
+    y = input("Enter multiplier: ")   # 11
+    count = len(y)  # no of bits in y # 2
+    x, y = adjust_number(x, y)        # 1011, 0001
+    product = binary_multiplication(x, y, count) 
     print(f"Product = {product}")
