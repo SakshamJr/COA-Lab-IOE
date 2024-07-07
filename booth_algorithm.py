@@ -23,7 +23,6 @@ def booth(M, Q):
 
     return A + Q
 
-
 if __name__ == "__main__":
     M = input("Enter multiplicand: ")
     Q = input("Enter multiplier: ")

@@ -3,7 +3,6 @@
 
 from binary_subtraction import binary_adder, twos_complement
 
-
 def restoring_division(Q, M):
     count = len(Q)  # no of bits in dividend Q
     if len(M) <= count:
